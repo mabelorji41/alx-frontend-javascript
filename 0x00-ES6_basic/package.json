@@ -1,0 +1,54 @@
+{
+    "name": "my-project",
+    "version": "1.0.0",
+    "description": "A project to demonstrate Jest, Babel, and ESLint setup",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "dev": "node",
+        "build": "babel src -d dist",
+        "start": "node ./0-main.js"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.24.7",
+        "@babel/core": "^7.24.7",
+        "@babel/preset-env": "^7.24.7",
+        "babel-jest": "^29.7.0",
+        "eslint": "^8.20.0",
+        "jest": "^29.0.0"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ]
+    },
+    "jest": {
+        "transform": {
+            "^.+\\.jsx?$": "babel-jest"
+        }
+    },
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "es2021": true,
+            "jest": true
+        },
+        "extends": "eslint:recommended",
+        "parserOptions": {
+            "ecmaVersion": 12,
+            "sourceType": "module"
+        },
+        "rules": {
+            "semi": [
+                "error",
+                "always"
+            ],
+            "quotes": [
+                "error",
+                "double"
+            ]
+        }
+    },
+    "author": "Anyasi Bamiyor",
+    "license": "ISC"
+}
